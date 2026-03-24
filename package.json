@@ -13,7 +13,8 @@
     "migrate:pid-lc-prefix": "tsx scripts/migrate-pid-add-lc-prefix.ts",
     "verify:import": "tsx scripts/verify-import.ts",
     "add:daily": "tsx scripts/add-daily-problems.ts",
-    "scheduler": "tsx scripts/scheduler.ts"
+    "scheduler": "tsx scripts/scheduler.ts",
+    "reschedule": "tsx scripts/reschedule.ts"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
