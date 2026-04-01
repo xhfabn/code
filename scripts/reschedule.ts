@@ -11,7 +11,7 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-const DAILY_LIMIT = 20;
+const DAILY_LIMIT = 10;
 const NEW_PER_DAY = 2;
 
 function startOfDay(date: Date): Date {
