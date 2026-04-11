@@ -94,17 +94,18 @@ export const QuestionPreviewModal = ({
                   </Button>
                 </a>
               )}
-              <Link href={`/questions/${data.id}`}>
-                <Button
-                  size="sm"
-                  className="gap-2 h-11 px-6 rounded-2xl bg-gray-900 hover:bg-black text-white shadow-md shadow-gray-200 hover:shadow-gray-400 transition-all active:scale-95 cursor-pointer"
-                >
+              <Button
+                asChild
+                size="sm"
+                className="gap-2 h-11 px-6 rounded-2xl bg-gray-900 hover:bg-black text-white shadow-md shadow-gray-200 hover:shadow-gray-400 transition-all active:scale-95 cursor-pointer"
+              >
+                <Link href={`/questions/${data.id}`}>
                   <Edit3 size={16} />{" "}
                   <span className="font-semibold">
                     {t("previewSheet.editBtn")}
                   </span>
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
 

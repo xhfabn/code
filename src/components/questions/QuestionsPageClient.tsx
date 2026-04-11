@@ -503,14 +503,14 @@ export default function QuestionsPageClient({
               </DialogContent>
             </Dialog>
 
-            <Link href={'/questions/add'}>
-              <Button className="h-12 px-6 bg-[#ffa116] hover:bg-[#e69318] text-white flex-1 md:flex-none cursor-pointer rounded-2xl transition-all">
+            <Button asChild className="h-12 px-6 bg-[#ffa116] hover:bg-[#e69318] text-white flex-1 md:flex-none cursor-pointer rounded-2xl transition-all">
+              <Link href={'/questions/add'}>
                 <Save className="w-5 h-5 mr-2" />
                 <span className="font-semibold text-base">
                   {t('questionPage.createBtn')}
                 </span>
-              </Button>
-            </Link>
+              </Link>
+            </Button>
           </div>
         </div>
 

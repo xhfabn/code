@@ -35,12 +35,12 @@ export const ReviewEmptyState = () => {
         {t("reviewEmptyState.description")}
       </p>
 
-      <Link href="/questions">
-        <Button className="h-12 px-8 rounded-2xl bg-gray-900 hover:bg-black text-white shadow-xl shadow-gray-200 hover:shadow-gray-300 transition-all active:scale-95 text-base font-medium cursor-pointer">
+      <Button asChild className="h-12 px-8 rounded-2xl bg-gray-900 hover:bg-black text-white shadow-xl shadow-gray-200 hover:shadow-gray-300 transition-all active:scale-95 text-base font-medium cursor-pointer">
+        <Link href="/questions">
           {t("reviewEmptyState.actionBtn")}{" "}
           <ArrowRight size={18} className="ml-2" />
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </motion.div>
   );
 };

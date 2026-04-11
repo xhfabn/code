@@ -60,15 +60,16 @@ export const QuestionPreviewSheet = ({
                   {t(`questionsTable.diff${data.problem.difficulty}` as any)}
                 </Badge>
               </div>
-              <Link href={`/questions/${data.id}`}>
-                <Button
-                  size="sm"
-                  variant="outline"
-                  className="gap-2 h-8 text-xs"
-                >
+              <Button
+                asChild
+                size="sm"
+                variant="outline"
+                className="gap-2 h-8 text-xs"
+              >
+                <Link href={`/questions/${data.id}`}>
                   <Edit3 size={12} /> {t("previewSheet.editBtn")}
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
             <div>
               <SheetTitle className="text-2xl font-bold text-gray-900 leading-tight">

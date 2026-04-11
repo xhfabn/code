@@ -203,15 +203,16 @@ export const QuestionsTable = ({
                         >
                           <Eye size={18} />
                         </Button>
-                        <Link href={`/questions/${row.id}`}>
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            className="h-9 w-9 rounded-full hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                          >
+                        <Button
+                          asChild
+                          variant="ghost"
+                          size="icon"
+                          className="h-9 w-9 rounded-full hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        >
+                          <Link href={`/questions/${row.id}`}>
                             <Edit3 size={18} />
-                          </Button>
-                        </Link>
+                          </Link>
+                        </Button>
                         <Button
                           variant="ghost"
                           size="icon"
