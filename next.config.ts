@@ -1,6 +1,14 @@
 import type { NextConfig } from "next";
 
+const rawBasePath = process.env.NEXT_BASE_PATH?.trim() || "";
+const normalizedBasePath = rawBasePath
+  ? rawBasePath.startsWith("/")
+    ? rawBasePath
+    : `/${rawBasePath}`
+  : "";
+
 const nextConfig: NextConfig = {
+  ...(normalizedBasePath ? { basePath: normalizedBasePath } : {}),
   async redirects() {
     return [
       {
