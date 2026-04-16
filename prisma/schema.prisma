@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./dev.db"
+  url      = env("DATABASE_URL")
 }
 
 model Problem {
@@ -17,7 +17,7 @@ model Problem {
   difficulty      String
   difficultyLevel Int        @default(1)
   tags            String
-  Progress        Progress[]
+  progress        Progress[]
 
   @@unique([platform, pid])
 }
@@ -36,9 +36,9 @@ model Progress {
   nextReview   DateTime     @default(now())
   createdAt    DateTime     @default(now())
   updatedAt    DateTime
-  Problem      Problem      @relation(fields: [problemId], references: [id])
-  User         User         @relation(fields: [userId], references: [id])
-  Submission   Submission[]
+  problem      Problem      @relation(fields: [problemId], references: [id])
+  user         User         @relation(fields: [userId], references: [id])
+  submissions  Submission[]
 
   @@unique([userId, problemId])
 }
@@ -51,7 +51,7 @@ model Submission {
   isMain     Boolean  @default(false)
   createdAt  DateTime @default(now())
   updatedAt  DateTime
-  Progress   Progress @relation(fields: [progressId], references: [id])
+  progress   Progress @relation(fields: [progressId], references: [id])
 }
 
 model User {
@@ -63,5 +63,5 @@ model User {
   themeColor       String     @default("emerald")
   dailyReviewLimit Int        @default(50)
   createdAt        DateTime   @default(now())
-  Progress         Progress[]
+  progress         Progress[]
 }
